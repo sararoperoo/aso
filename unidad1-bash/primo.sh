@@ -2,7 +2,8 @@
 num=$1
 contador=0
 for ((i=1; i<=$num; i++)); do
-  if [[ $((numero%i)) -eq 0 ]]; then
+  modulo=$((num%i))
+  if [[ $modulo -eq 0 ]]; then
     ((contador ++))
   fi
 done
